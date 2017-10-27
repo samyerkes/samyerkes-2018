@@ -35,11 +35,13 @@ get_header(); ?>
 													endif;
 												?>
 											</div>
-											<div class="level-right">
-												<p class="subtitle is-5">
-													<?php the_date( 'F j, Y' ); ?>
-												</p>
-											</div>
+											<?php if (! is_page() ) : ?>
+												<div class="level-right">
+													<p class="subtitle is-5">
+														<?php the_date( 'F j, Y' ); ?>
+													</p>
+												</div>
+											<?php endif; ?>
 										</div>
 										<?php
 											if ( is_singular() ) :
