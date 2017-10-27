@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sam Yerkes, Web Developer #RVA">
 
-    <title>Sam Yerkes</title>
+    <title><?php echo wp_title('|', true, 'right') . get_bloginfo('name'); ?></title>
     
     <?php wp_head(); ?>
 </head>
