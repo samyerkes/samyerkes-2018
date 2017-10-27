@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +11,15 @@
 </head>
 
 <body>
+    <div id="skip-links">
+      <a href="#main-content">Skip to content</a>
+      <a href="#main-navigation">Skip to navigation</a>
+      <a href="#main-footer">Skip to footer</a>
+    </div>
+
     <div id="app">
       
-        <section class="hero is-bold">
+        <header id="main-navigation" class="hero is-bold">
           <div class="hero-body">
             <div class="container">
                 <div class="level">
@@ -44,4 +50,4 @@
               
             </div>
           </div>
-        </section>
+        </header>

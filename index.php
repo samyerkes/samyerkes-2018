@@ -15,7 +15,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="section">
+		<main id="main-content" class="section">
 
 			<div class="container">
 				<div class="content">
@@ -43,13 +43,15 @@ get_header(); ?>
 												</div>
 											<?php endif; ?>
 										</div>
-										<?php
-											if ( is_singular() ) :
-												the_content();
-											else :
-												the_excerpt();
-											endif;
-										?>
+										<div class="entry-content">
+											<?php
+												if ( is_singular() ) :
+													the_content();
+												else :
+													the_excerpt();
+												endif;
+											?>
+										</div>
 									</article>
 								<?php endwhile; ?> 
 							<?php else : ?>
