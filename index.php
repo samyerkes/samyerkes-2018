@@ -41,15 +41,13 @@ get_header(); ?>
 												</p>
 											</div>
 										</div>
-										<div class="level">
-											<?php
-												if ( is_singular() ) :
-													the_content();
-												else :
-													the_excerpt();
-												endif;
-											?>
-										</div>
+										<?php
+											if ( is_singular() ) :
+												the_content();
+											else :
+												the_excerpt();
+											endif;
+										?>
 									</article>
 								<?php endwhile; ?> 
 							<?php else : ?>
