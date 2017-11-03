@@ -8,6 +8,9 @@ $danger: #d1002a;
 @import "~bulma/bulma";
 
 /* Sam Yerkes Overrides */
+code {
+  color: $danger;
+}
 .footer {
   background-color: whitesmoke;
   padding: 3rem 1.5rem 6rem;
