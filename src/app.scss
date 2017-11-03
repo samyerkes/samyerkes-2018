@@ -1,4 +1,10 @@
-// Bulma
+// Bulma // 
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+$success: #147a38;
+$danger: #d1002a;
+
 @import "~bulma/bulma";
 
 /* Sam Yerkes Overrides */
