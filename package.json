@@ -1,0 +1,29 @@
+{
+  "name": "samyerkes-2018",
+  "version": "1.0.0",
+  "description": "A wordpress theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samyerkes/samyerkes-2018.git"
+  },
+  "author": "Sam Yerkes <samuelyerkes@gmail.com> (http://samyerkes.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samyerkes/samyerkes-2018/issues"
+  },
+  "homepage": "https://github.com/samyerkes/samyerkes-2018#readme",
+  "devDependencies": {
+    "bulma": "^0.6.0",
+    "laravel-mix": "^1.5.1"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  }
+}

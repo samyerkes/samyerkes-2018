@@ -32,19 +32,18 @@
                     </div>
                     <div class="level-right">
                         <div class="level-item">
-                            <?php
-                                $menuParameters = array(
-                                  'container'       => false,
-                                  'depth'           => 0,
-                                  'echo'            => false,
-                                  'items_wrap'      => '%3$s',
-                                  'menu_class'    => 'level-item',
-                                  'theme_location' => 'primary',
-                                );
-                                $themeMenu = strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
-                                echo preg_replace('/<a /', '<a class="nav-item"', $themeMenu);
-                            ?>
-                        </div>
+                          <?php
+                              $menuParameters = array(
+                                'container'       => false,
+                                'depth'           => 0,
+                                'echo'            => false,
+                                'items_wrap'      => '%3$s',
+                                'menu_class'    => 'level-item',
+                                'theme_location' => 'primary',
+                              );
+                              $themeMenu = strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
+                              echo preg_replace('/<a /', '<a class="navbar-item"', $themeMenu);
+                          ?>
                     </div>
                 </div>
               

@@ -2,7 +2,7 @@
             <div class="container">
                 <div class="columns">
                     <div class="column">
-                        <p class="is-small"><strong>Pronounciation help:</strong> Yerkes rhymes with circus</p>
+                        <p><strong>Pronounciation help:</strong> Yerkes rhymes with circus</p>
                     </div>
                     <div class="column">
                         <status></status>

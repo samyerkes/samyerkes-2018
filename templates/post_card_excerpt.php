@@ -5,9 +5,7 @@
 	?>
 	<div class="card">
 	    <div class="card-image">
-	        <figure class="image ">
-	            <?php echo get_the_post_thumbnail( $post->ID, 'medium_large' ); ?>
-	        </figure>
+	        <?php echo get_the_post_thumbnail( $post->ID, 'medium_large' ); ?>
 	    </div>
 	    <div class="card-content">
 	        <div class="content">

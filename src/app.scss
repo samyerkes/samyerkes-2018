@@ -1,0 +1,60 @@
+// Bulma
+@import "~bulma/bulma";
+
+/* Sam Yerkes Overrides */
+.footer {
+  background-color: whitesmoke;
+  padding: 3rem 1.5rem 6rem;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.footer {
+  background-color: rgba(243, 243, 254, 0.25);
+  border-top: 2px solid #F3F3FF;
+  border-bottom: 2px solid #F3F3FF;
+}
+
+article {
+  padding-bottom: 3rem;
+}
+
+a {
+  color: #1976d2;
+}
+
+/* accessibility */
+.entry-content a, #skip-links a {font-weight: 700;}
+.content a:hover, .entry-content a:focus {text-decoration: underline;}
+a.nav-item {
+	color: #727272;
+}
+#skip-links a {
+    font-size: 14px;
+    text-decoration: underline;    
+    position: absolute;
+    left: 15px;
+    top: -100px;
+    z-index: 10000;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 15px;
+    background-color: transparent;
+    outline: none;
+    transition: top .2s,background-color .2s;
+}
+#skip-links a:active,
+#skip-links a:focus {
+  top: 0;
+  background-color: rgba(243, 243, 254, 0.25);
+} 
+#skip-links {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin-left: 0;
+    list-style: outside none;
+}
