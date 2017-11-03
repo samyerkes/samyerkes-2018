@@ -21,5 +21,4 @@ function add_custom_styles_and_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'add_custom_styles_and_scripts' );
 
-
-
+add_theme_support( 'post-thumbnails', array( 'post', 'photos' ) );
