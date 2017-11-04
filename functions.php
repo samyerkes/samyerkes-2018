@@ -35,17 +35,13 @@ add_theme_support( 'post-thumbnails', array( 'post', 'photos' ) );
 add_filter('post_gallery','customFormatGallery',10,2);
 
 function customFormatGallery($string,$attr){
-
     $output = "<div class=\"columns is-multiline\">";
     $posts = get_posts(array('include' => $attr['ids'],'post_type' => 'attachment'));
-
     foreach($posts as $imagePost){
         $output .= "<div class=\"column is-half-tablet\">";
-          $output .= "<img src='".wp_get_attachment_image_src($imagePost->ID, 'medium_large')[0]."'>";
+          $output .= wp_get_attachment_image( $imagePost->ID, 'large', "", array( "class" => "image" ) );
         $output .= "</div>";
     }
-
     $output .= "</div>";
-
     return $output;
 }
