@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sam Yerkes, Web Developer #RVA">
+    <meta name="description" content="<?php echo get_bloginfo('description') ? get_bloginfo('description') : "Sam Yerkes, Web Developer #RVA"; ?>">
 
     <title><?php echo wp_title('|', true, 'right') . get_bloginfo('name'); ?></title>
     
+    <meta name="theme-color" content="#1976d2"/>
     <?php wp_head(); ?>
 </head>
 
