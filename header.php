@@ -27,7 +27,7 @@
                     <div class="level-left">
                         <div class="level-item">
                             <h1 class="title">
-                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Sam Yerkes</a>
+                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Link to the homepage">Sam Yerkes</a>
                             </h1>
                         </div>
                     </div>
