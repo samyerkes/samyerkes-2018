@@ -2,25 +2,40 @@
 // 1. Import the initial variables
 @import "../node_modules/bulma/sass/utilities/initial-variables";
 
+// 2. Overwrite some initial bulma variables
 $success: #147a38;
 $danger: #d1002a;
 
-@import "~bulma/bulma";
+$blue: #1976d2; 
+
+$desktop: 768px;
+$widescreen: 800px;
+
+$code: $danger;
+
+// 3. Import the rest of what you're using with bulma
+// Utilities
+@import "../node_modules/bulma/sass/utilities/_all";
+// Base
+@import "../node_modules/bulma/sass/base/_all";
+// Elements
+@import "../node_modules/bulma/sass/elements/button";
+@import "../node_modules/bulma/sass/elements/container";
+@import "../node_modules/bulma/sass/elements/content";
+@import "../node_modules/bulma/sass/elements/title";
+// Components
+@import "../node_modules/bulma/sass/components/card";
+@import "../node_modules/bulma/sass/components/level";
+@import "../node_modules/bulma/sass/components/navbar";
+// Grid
+@import "../node_modules/bulma/sass/grid/columns";
+// Layout
+@import "../node_modules/bulma/sass/layout/_all";
+
+// 4. Import some specific Wordpress css
 @import "theme";
 
 /* Sam Yerkes Overrides */
-code {
-  color: $danger;
-}
-.footer {
-  background-color: whitesmoke;
-  padding: 3rem 1.5rem 6rem;
-}
-
-.container {
-  max-width: 800px;
-}
-
 .footer {
   background-color: rgba(243, 243, 254, 0.25);
   border-top: 2px solid #F3F3FF;
@@ -29,10 +44,6 @@ code {
 
 article {
   padding-bottom: 3rem;
-}
-
-a {
-  color: #1976d2;
 }
 
 /* accessibility */
