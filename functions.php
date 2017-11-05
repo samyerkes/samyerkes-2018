@@ -1,14 +1,5 @@
 <?php
 
-/* Disable standard image gallery style */
-// Remove Gallery Styling
-add_filter( 'gallery_style', 'my_gallery_style', 99 );
-function my_gallery_style() {
-    return "
-";
-}
-add_filter( 'use_default_gallery_style', '__return_false' );
-
 /* Disable emojis */
 function disable_wp_emojicons() {
   // all actions related to emojis
@@ -29,6 +20,13 @@ function add_custom_styles_and_scripts() {
   wp_enqueue_script( 'script', get_template_directory_uri() . '/dist/app.js', array (), 1, true);
 }
 add_action( 'wp_enqueue_scripts', 'add_custom_styles_and_scripts' );
+
+add_action( 'wp_head', 'inc_manifest_link' );
+
+// Creates the link tag
+function inc_manifest_link() {   
+        echo '<link rel="manifest" href="' . get_template_directory_uri(). '/manifest.json">';
+}
 
 add_theme_support( 'post-thumbnails', array( 'post', 'photos' ) );
 

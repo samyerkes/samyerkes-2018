@@ -1,0 +1,11 @@
+{
+  "name": "Sam Yerkes",
+  "short_name": "Sam Yerkes",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "A simply readable Hacker News app.",
+  "related_applications": [{
+    "platform": "web"
+  }]
+}
