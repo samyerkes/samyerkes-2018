@@ -25,8 +25,11 @@ add_action( 'wp_head', 'inc_manifest_link' );
 
 // Creates the link tag
 function inc_manifest_link() {   
-        echo '<link rel="manifest" href="' . get_template_directory_uri(). '/manifest.json">';
+  echo '<link rel="manifest" href="' . get_template_directory_uri(). '/manifest.json">';
 }
+
+// Remove Wordpress Generator (version)
+remove_action('wp_head', 'wp_generator');
 
 add_theme_support( 'post-thumbnails', array( 'post', 'photos' ) );
 
