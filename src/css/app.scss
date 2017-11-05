@@ -1,6 +1,6 @@
 // Bulma // 
 // 1. Import the initial variables
-@import "../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
 
 // 2. Overwrite some initial bulma variables
 $success: #147a38;
@@ -15,22 +15,22 @@ $code: $danger;
 
 // 3. Import the rest of what you're using with bulma
 // Utilities
-@import "../node_modules/bulma/sass/utilities/_all";
+@import "../../node_modules/bulma/sass/utilities/_all";
 // Base
-@import "../node_modules/bulma/sass/base/_all";
+@import "../../node_modules/bulma/sass/base/_all";
 // Elements
-@import "../node_modules/bulma/sass/elements/button";
-@import "../node_modules/bulma/sass/elements/container";
-@import "../node_modules/bulma/sass/elements/content";
-@import "../node_modules/bulma/sass/elements/title";
+@import "../../node_modules/bulma/sass/elements/button";
+@import "../../node_modules/bulma/sass/elements/container";
+@import "../../node_modules/bulma/sass/elements/content";
+@import "../../node_modules/bulma/sass/elements/title";
 // Components
-@import "../node_modules/bulma/sass/components/card";
-@import "../node_modules/bulma/sass/components/level";
-@import "../node_modules/bulma/sass/components/navbar";
+@import "../../node_modules/bulma/sass/components/card";
+@import "../../node_modules/bulma/sass/components/level";
+@import "../../node_modules/bulma/sass/components/navbar";
 // Grid
-@import "../node_modules/bulma/sass/grid/columns";
+@import "../../node_modules/bulma/sass/grid/columns";
 // Layout
-@import "../node_modules/bulma/sass/layout/_all";
+@import "../../node_modules/bulma/sass/layout/_all";
 
 // 4. Import some specific Wordpress css
 @import "theme";

@@ -5,7 +5,7 @@
                         <p><strong>Pronounciation help:</strong> Yerkes rhymes with circus</p>
                     </div>
                     <div class="column">
-                        <status></status>
+                        <a id="system_status" href="https://status.samyerkes.com" class="button is-small is-outlined is-pulled-right is-success" target="_blank" rel="noopener">All systems are operational</a>
                     </div>
                 </div>
             </div>
@@ -14,9 +14,6 @@
     </div>
 
 </body>
-
-<script src="https://unpkg.com/vue@2.3.0"></script>
-<script src="https://cdn.jsdelivr.net/vue.resource/1.3.1/vue-resource.min.js"></script>
 
 <?php wp_footer(); ?>
 </html>

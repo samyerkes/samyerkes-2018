@@ -26,14 +26,14 @@ add_action( 'init', 'disable_wp_emojicons' );
 
 function add_custom_styles_and_scripts() {
   wp_enqueue_style( 'style', get_template_directory_uri() . '/dist/app.css' );  
-  wp_enqueue_script( 'script', get_template_directory_uri() . '/js/app.js', array (), 1, true);
+  wp_enqueue_script( 'script', get_template_directory_uri() . '/dist/app.js', array (), 1, true);
 }
 add_action( 'wp_enqueue_scripts', 'add_custom_styles_and_scripts' );
 
 add_theme_support( 'post-thumbnails', array( 'post', 'photos' ) );
 
+// Custom Image Gallery Markup
 add_filter('post_gallery','customFormatGallery',10,2);
-
 function customFormatGallery($string,$attr){
     $output = "<div class=\"columns is-multiline\">";
     $posts = get_posts(array('include' => $attr['ids'],'post_type' => 'attachment'));
@@ -45,3 +45,8 @@ function customFormatGallery($string,$attr){
     $output .= "</div>";
     return $output;
 }
+
+function my_deregister_scripts(){
+  wp_deregister_script( 'wp-embed' );
+}
+add_action( 'wp_footer', 'my_deregister_scripts' );
