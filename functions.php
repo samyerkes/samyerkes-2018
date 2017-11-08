@@ -15,15 +15,23 @@ function disable_wp_emojicons() {
 }
 add_action( 'init', 'disable_wp_emojicons' );
 
-// Async load scripts
-add_filter( 'script_loader_tag', 'samyerkes_async_scripts', 10, 3 );
-function samyerkes_async_scripts( $tag, $handle, $src ) {
-  // The handles of the enqueued scripts we want to async
+// defer load scripts
+add_filter( 'script_loader_tag', 'samyerkes_defer_scripts', 10, 3 );
+function samyerkes_defer_scripts( $tag, $handle, $src ) {
+  // The handles of the enqueued scripts we want to defer
   if ( $handle == 'samyerkes' ) {
-    return '<script type="text/javascript" src="' . $src . '" async></script>' . "\n";
+    return '<script type="text/javascript" src="' . $src . '" defer></script>' . "\n";
   }
   return $tag;
 } 
+
+// modify image tag
+function samyerkes_modify_thumbnail_html($html, $post_id, $post_thumbnail_id, $size, $attr) {
+  $id = get_post_thumbnail_id(); // gets the id of the current post_thumbnail (in the loop)
+  $image = wp_get_attachment_image($id, $size, "", array('class' => 'lazyload') ); // gets the image url specific to the passed in size (aka. custom image size)
+  return str_replace('src', 'data-src', $image );
+}
+add_filter('post_thumbnail_html', 'samyerkes_modify_thumbnail_html', 99, 5);
 
 function samyerkes_add_custom_styles_and_scripts() {
   wp_enqueue_style( 'samyerkes', get_template_directory_uri() . '/dist/app.css' );  
