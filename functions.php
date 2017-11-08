@@ -57,7 +57,7 @@ function samyerkes_custom_image_gallery_format($string,$attr){
     $posts = get_posts(array('include' => $attr['ids'],'post_type' => 'attachment'));
     foreach($posts as $imagePost){
         $output .= "<div class=\"column is-half-tablet\">";
-          $output .= wp_get_attachment_image( $imagePost->ID, 'large', "", array( "class" => "image" ) );
+          $output .= str_replace('src', 'data-src', wp_get_attachment_image( $imagePost->ID, 'large', "", array( "class" => "image lazyload" ) ));
         $output .= "</div>";
     }
     $output .= "</div>";
