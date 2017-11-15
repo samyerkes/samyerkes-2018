@@ -2,10 +2,31 @@
   "name": "Sam Yerkes",
   "short_name": "Sam Yerkes",
   "start_url": ".",
+  "icons": [
+    {
+      "src": "imgs/icons/samyerkes48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "imgs/icons/samyerkes96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "imgs/icons/samyerkes192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "imgs/icons/samyerkes512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
   "display": "standalone",
   "background_color": "#fff",
   "description": "Sam Yerkes, Web Developer #RVA",
-  "related_applications": [{
-    "platform": "web"
-  }]
+  "orientation": "portrait",
+  "theme_color": "#1976d2"
 }
