@@ -35,7 +35,7 @@ add_filter('post_thumbnail_html', 'samyerkes_modify_thumbnail_html', 99, 5);
 
 function samyerkes_add_custom_styles_and_scripts() {
   wp_enqueue_style( 'samyerkes', get_template_directory_uri() . '/dist/app.css' );  
-  wp_enqueue_script( 'samyerkes', get_template_directory_uri() . '/dist/app.js', array (), 1, true);
+  wp_enqueue_script( 'samyerkes_main', get_template_directory_uri() . '/dist/app.js', array (), 1, true);
 }
 add_action( 'wp_enqueue_scripts', 'samyerkes_add_custom_styles_and_scripts' );
 

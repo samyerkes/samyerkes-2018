@@ -1,7 +1,22 @@
 document.addEventListener("DOMContentLoaded", function(){
+  offline();
   lazyLoad();
   getSystemStatus();
 });
+
+function offline() {
+    console.log();
+    if ('serviceWorker' in navigator) {
+        console.log('CLIENT: service worker registration in progress.');
+        navigator.serviceWorker.register('offline.js').then(function() {
+            console.log('CLIENT: service worker registration complete.');
+        }, function() {
+            console.log('CLIENT: service worker registration failure.');
+        });
+    } else {
+        console.log('CLIENT: service worker is not supported.');
+    }
+}
 
 function getSystemStatus() {
     let request = new XMLHttpRequest(),
@@ -79,10 +94,5 @@ function lazyLoad() {
             element.src = element.dataset.src;
         });
     }
-
-
-    
-
-
 
 }
