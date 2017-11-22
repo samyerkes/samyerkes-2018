@@ -68,3 +68,13 @@ function samyerkes_deregister_scripts(){
   wp_deregister_script( 'wp-embed' );
 }
 add_action( 'wp_footer', 'samyerkes_deregister_scripts' );
+
+// Add classes to pagination links
+add_filter('next_posts_link_attributes', 'samyerkes_post_links_next');
+add_filter('previous_posts_link_attributes', 'samyerkes_post_links_previous');
+function samyerkes_post_links_previous() {
+    return 'class="pagination-next" aria-label="Newer posts"';
+}
+function samyerkes_post_links_next() {
+    return 'class="pagination-previous" aria-label="Previous posts"';
+}

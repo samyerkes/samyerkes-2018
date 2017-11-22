@@ -25,7 +25,6 @@ get_header(); ?>
 							<?php if ( have_posts() ) : ?>
 								<?php while ( have_posts() ) : the_post(); ?>
 									<article>
-
 										<?php
 											if ( is_singular() ) :
 												include('templates/post.php');
@@ -33,15 +32,16 @@ get_header(); ?>
 												include('templates/post_card_excerpt.php');
 											endif;
 										?>
-											
 									</article>
 								<?php endwhile; ?> 
 							<?php else : ?>
 								<h2>No posts to show...</h2>
 							<?php endif; ?>
+
 						</div>
 						<div class="column is-one-quarter">
 							<?php get_sidebar(); ?>
+							<?php include('templates/pagination.php'); ?>
 						</div>
 					</div>	
 				</div>	
