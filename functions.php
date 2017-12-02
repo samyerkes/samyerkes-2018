@@ -28,7 +28,7 @@ function samyerkes_defer_scripts( $tag, $handle, $src ) {
 // modify image tag
 function samyerkes_modify_thumbnail_html($html, $post_id, $post_thumbnail_id, $size, $attr) {
   $id = get_post_thumbnail_id(); // gets the id of the current post_thumbnail (in the loop)
-  $image = wp_get_attachment_image($id, $size, "", array('class' => 'lazyload') ); // gets the image url specific to the passed in size (aka. custom image size)
+  $image = wp_get_attachment_image($id, $size, "", array('class' => 'lazyload', "data-action" => "zoom") ); // gets the image url specific to the passed in size (aka. custom image size)
   return str_replace('src', 'data-src', $image );
 }
 add_filter('post_thumbnail_html', 'samyerkes_modify_thumbnail_html', 99, 5);
@@ -57,7 +57,7 @@ function samyerkes_custom_image_gallery_format($string,$attr){
     $posts = get_posts(array('include' => $attr['ids'],'post_type' => 'attachment'));
     foreach($posts as $imagePost){
         $output .= "<div class=\"column is-half-tablet\">";
-          $output .= str_replace('src', 'data-src', wp_get_attachment_image( $imagePost->ID, 'large', "", array( "class" => "image lazyload" ) ));
+          $output .= str_replace('src', 'data-src', wp_get_attachment_image( $imagePost->ID, 'large', "", array( "class" => "image lazyload", "data-action" => "zoom" ) ));
         $output .= "</div>";
     }
     $output .= "</div>";

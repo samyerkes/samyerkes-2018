@@ -1,3 +1,8 @@
+import mediumZoom from 'medium-zoom'
+mediumZoom(document.querySelectorAll('[data-action="zoom"]'), {
+  margin: 40,
+})
+
 document.addEventListener("DOMContentLoaded", function(){
   offline();
   lazyLoad();
