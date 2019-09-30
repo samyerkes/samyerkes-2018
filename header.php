@@ -9,44 +9,42 @@
     
     <meta name="theme-color" content="#1976d2"/>
     <?php wp_head(); ?>
+    
 </head>
 
-<body>
-    <div id="skip-links">
+<body class="text-gray-300 bg-gray-900 text-2xl font-sans font-thin leading-relaxed">
+    <div id="skip-links" class="bg-gray-600">
       <a href="#main-content">Skip to content</a>
       <a href="#main-navigation">Skip to navigation</a>
       <a href="#main-footer">Skip to footer</a>
     </div>
 
-    <div id="app">
-      
-        <header id="main-navigation" class="hero is-bold">
-          <div class="hero-body">
-            <div class="container">
-                <div class="level">
-                    <div class="level-left">
-                        <div class="level-item">
-                            <h1 class="title">
-                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Link to the homepage">Sam Yerkes</a>
-                            </h1>
-                        </div>
-                    </div>
-                    <div class="level-right">
-                        <div class="level-item">
-                          <?php
-                              $menuParameters = array(
-                                'container'       => false,
-                                'depth'           => 0,
-                                'echo'            => false,
-                                'items_wrap'      => '%3$s',
-                                'menu_class'    => 'level-item',
-                                'theme_location' => 'primary',
-                              );
-                              $themeMenu = strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
-                              echo preg_replace('/<a /', '<a class="navbar-item"', $themeMenu);
-                          ?>
-                    </div>
-                </div>
-            </div>
+    <div id="app" class="px-4">      
+        <header id="main-navigation" class="">
+          <div class="container mx-auto border-b border-gray-600 py-16 text-gray-400">
+              <div class="flex justify-between flex-row">
+                  <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                      <div class="">
+                          <h1 class="text-3xl">
+                              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Link to the homepage">Sam Yerkes</a>
+                          </h1>
+                      </div>
+                  </div>
+                  <div class="">
+                      <div class="">
+                        <?php
+                            $menuParameters = array(
+                              'container'       => false,
+                              'depth'           => 0,
+                              'echo'            => false,
+                              'items_wrap'      => '%3$s',
+                              'menu_class'    => 'level-item',
+                              'theme_location' => 'primary',
+                            );
+                            $themeMenu = strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
+                            echo preg_replace('/<a /', '<a class="text-base"', $themeMenu);
+                        ?>
+                  </div>
+              </div>
           </div>
         </header>

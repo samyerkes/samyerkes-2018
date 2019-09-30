@@ -1,11 +1,9 @@
-        <footer id="main-footer" class="footer">
+        <footer id="main-footer" class="container mx-auto border-t mt-8 pt-16 pb-12 text-gray-600 text-base">
             <div class="container">
                 <div class="columns">
                     <div class="column">
-                        <p><strong>Pronounciation help:</strong> Yerkes rhymes with circus</p>
-                    </div>
-                    <div class="column">
-                        <a id="system_status" href="https://status.samyerkes.com" class="button is-small is-outlined is-pulled-right is-success" target="_blank" rel="noopener">All systems are operational</a>
+                        <p class="pb-2 m-0 text-gray-500"><strong>Pronounciation help</strong></p>
+                        <p>Yerkes (YER-kiss), rhymes with circus</p>
                     </div>
                 </div>
             </div>

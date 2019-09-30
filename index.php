@@ -17,11 +17,11 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main-content" class="section">
 
-			<div class="container">
-				<div class="content">
-					<div class="columns">
+			<div class="container mx-auto py-16">
+				<div class="content ">
+					<div class="flex ">
 						
-						<div class="column is-three-quarters">
+						<div class="w-3/4 sm:w-full md:w-full lg:w-3/4 xl:w-3/4">
 							<?php if ( have_posts() ) : ?>
 								<?php while ( have_posts() ) : the_post(); ?>
 									<article>
@@ -39,7 +39,7 @@ get_header(); ?>
 							<?php endif; ?>
 
 						</div>
-						<div class="column is-one-quarter">
+						<div class="w-auto flex-none opacity-50 p-16 max-w-xs">
 							<?php get_sidebar(); ?>
 							<?php include('templates/pagination.php'); ?>
 						</div>

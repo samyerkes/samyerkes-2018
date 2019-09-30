@@ -7,12 +7,12 @@
 	<div class="level">
 		<div class="level-left">
 			<?php
-				the_title( '<h2 class="title">', '</h2>' );
+				the_title( '<h2 class="text-4xl pt-4 text-gray-600">', '</h2>' );
 			?>
 		</div>
 		<?php if (! is_page() ) : ?>
 			<div class="level-right">
-				<p class="subtitle is-5">
+				<p class="subtitle text-base pb-4">
 					<?php the_date( 'F j, Y' ); ?>
 				</p>
 			</div>
