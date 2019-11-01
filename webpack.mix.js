@@ -1,9 +1,13 @@
-let mix = require('laravel-mix');
+let mix 		= require('laravel-mix'),
+	tailwindcss = require('tailwindcss');
 
-mix.js('src/js/app.js', 'dist')
-	.js('src/js/offline.js', 'dist');
+const distDir = 'dist';
 
+mix.js('src/js/app.js', distDir)
+	.js('src/js/offline.js', distDir);
 
-mix.postCss('src/css/app.scss', 'dist', [
-	require('tailwindcss'),
-]);
+mix.sass('src/css/app.scss', distDir)
+	.options({
+	  processCssUrls: false,
+	  postCss: [ tailwindcss('./tailwind.config.js') ],
+	});

@@ -9,19 +9,18 @@
     
     <meta name="theme-color" content="#1976d2"/>
     <?php wp_head(); ?>
-    
 </head>
 
-<body class="text-gray-300 bg-gray-900 text-2xl font-sans font-thin leading-relaxed">
-    <div id="skip-links" class="bg-gray-600">
+<body>
+    <div id="skip-links">
       <a href="#main-content">Skip to content</a>
       <a href="#main-navigation">Skip to navigation</a>
       <a href="#main-footer">Skip to footer</a>
     </div>
 
     <div id="app" class="px-4">      
-        <header id="main-navigation" class="">
-          <div class="container mx-auto border-b border-gray-600 py-16 text-gray-400">
+        <header id="main-navigation">
+          <div class="container mx-auto border-b border-gray-600 py-16">
               <div class="flex justify-between flex-row">
                   <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                       <div class="">

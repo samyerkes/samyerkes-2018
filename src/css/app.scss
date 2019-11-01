@@ -4,11 +4,16 @@
 
 @tailwind utilities;
 
-p, h2, h3, h4, h5, h6, ul, ol, pre {margin-bottom: 2rem;}
-h2, h3, h4, h5, h6 {color: #718096}
+
+body {
+    @apply text-gray-300 bg-gray-900 text-2xl font-sans font-thin leading-relaxed;
+}
+
+p, h2, h3, h4, h5, h6, ul, ol, pre {@apply mb-8}
+h2, h3, h4, h5, h6, pre {@apply text-gray-600}
 h3 {font-size:1.75rem;}
 ul {list-style: disc; padding-left: 4rem}
-pre {font-size: 1rem; color: #718096;}
+pre {font-size: 1rem;}
 a {font-weight: 500;}
 a:hover, a:focus {
     color: #e53e3e;
@@ -40,10 +45,19 @@ article h2 a {border:none !important;}
   background-color: rgba(243, 243, 254, 0.25);
 } 
 #skip-links {
+    @apply bg-gray-600;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     margin-left: 0;
     list-style: outside none;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {@apply bg-gray-900}
+}
+  
+@media (prefers-color-scheme: light) {
+    body {@apply bg-gray-200 text-gray-800}
 }
